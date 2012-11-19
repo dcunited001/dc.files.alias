@@ -1,0 +1,16 @@
+source ~/.files/alias/alias
+
+#typical mac ish
+export USRPREF=$HOME/Library/Preferences
+
+#opening urls
+alias urlch="open -a '/Applications/Google Chrome.app'"
+alias urlfi="open -a '/Applications/Firefox.app'"
+
+#saves iterm profiles
+alias save-iterm="cp Library/Preferences/com.googlecode.iterm2.plist ~/dotfiles/iterm/"
+
+#brew
+alias brin='brew install'
+alias brup='brew update'
+alias brupgrade='brew update && brew upgrade'

@@ -1,0 +1,39 @@
+#refresh profiles
+alias sbash='source ~/.bashrc'
+alias sbashp='source ~/.bash_profile'
+alias szsh='source ~/.zshrc'
+
+#edit profiles
+alias vbash='vim ~/.bashrc'
+alias vbashp='vim ~/.bash_profile'
+alias vzsh='vim ~/zshrc'
+
+#ls aliases
+alias la='ls -al'
+alias ll='ls -l'
+alias lsym='ll | grep -e -\>'
+alias lasym='la | grep -e -\>'
+#alias lah=only hidden
+#alias lahl=only hidden details
+
+#git aliases
+alias gpom='git push origin master'
+alias gpum='git pull origin master'
+alias gsas='git status'
+alias gsta='git status'
+alias gad='git add'
+alias grm='git rm'
+alias gcom='git commit -m'
+alias gch='git checkout'
+alias gchb='git checkout -b'
+alias gbl='git branch'
+alias gdf='git diff'
+alias gdif='git diff'
+
+#misc
+alias rf='rm -rf'
+alias df='df -h' #show remaining space in megs
+
+#change default shells
+alias set-zsh-default='chsh -s /bin/zsh'
+alias set-bash-default='chsh -s /bin/bash'
