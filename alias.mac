@@ -1,4 +1,4 @@
-source ~/.files/alias/alias
+source $HOME/.files/alias/alias
 
 #typical mac ish
 export USRPREF=$HOME/Library/Preferences
