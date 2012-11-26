@@ -1,12 +1,12 @@
 #refresh profiles
 alias sbash='source ~/.bashrc'
 alias sbashp='source ~/.bash_profile'
-alias szsh='source ~/.zshrc'
+alias szsh='source ~/.zsh/.zshrc'
 
 #edit profiles
 alias vbash='vim ~/.bashrc'
 alias vbashp='vim ~/.bash_profile'
-alias vzsh='vim ~/zshrc'
+alias vzsh='vim ~/.zsh/.zshrc'
 
 #ls aliases
 alias la='ls -al'
