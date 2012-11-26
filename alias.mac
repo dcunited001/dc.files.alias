@@ -14,3 +14,7 @@ alias save-iterm="cp Library/Preferences/com.googlecode.iterm2.plist ~/dotfiles/
 alias brin='brew install'
 alias brup='brew update'
 alias brupgrade='brew update && brew upgrade'
+
+#keyremap (maybe just add to path?)
+alias keyremap_cli='/Library/org.pqrs/KeyRemap4MacBook/app/KeyRemap4MacBook_cli.app/Contents/MacOS/KeyRemap4MacBook_cli'
+alias kmap_reload='keyremap_cli reloadxml'
