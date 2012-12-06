@@ -18,3 +18,8 @@ alias brupgrade='brew update && brew upgrade'
 #keyremap (maybe just add to path?)
 alias keyremap_cli='/Library/org.pqrs/KeyRemap4MacBook/app/KeyRemap4MacBook_cli.app/Contents/MacOS/KeyRemap4MacBook_cli'
 alias kmap_reload='keyremap_cli reloadxml'
+
+#osx admin commands
+# show approved firewall apps - requires sudo 
+#alias firewall_trusted_apps='sudo ./socketfilterfw -l | grep TRUSTEDAPPS'
+
