@@ -18,6 +18,10 @@ alias brupgrade='brew update && brew upgrade'
 #keyremap (maybe just add to path?)
 alias keyremap_cli='/Applications/KeyRemap4MacBook.app/Contents/Applications/KeyRemap4MacBook_cli.app/Contents/MacOS/KeyRemap4MacBook_cli'
 alias kmap_reload='keyremap_cli reloadxml'
+export KMAPPRIV="$HOME/Library/Application Support/KeyRemap4MacBook/"
+export KMAPPREF="$HOME/Library/Preferences/org.pqrs.KeyRemap4MacBook.plist"
+export KMAPPREFTOUCH="$HOME/Library/Preferences/org.pqrs.KeyRemap4MacBook.multitouchextension.plist"
+export KMAPPREFPC="$HOME/Library/Preferences/org.pqrs.PCKeyboardHack.plist"
 
 #osx admin commands
 # show approved firewall apps - requires sudo 
