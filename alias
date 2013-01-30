@@ -8,7 +8,7 @@ alias vbash='vim ~/.bashrc'
 alias vbashp='vim ~/.bash_profile'
 alias vzsh='vim ~/.zsh/.zshrc'
 
-#ls aliases
+#ls ================
 alias la='ls -al'
 alias ll='ls -l'
 alias lsym='ll | grep -e -\>'
@@ -16,7 +16,12 @@ alias lasym='la | grep -e -\>'
 #alias lah=only hidden
 #alias lahl=only hidden details
 
-#git aliases
+#emacs ================
+alias demacs="emacs --daemon"
+alias wemacs="emacsclient -c"
+alias temacs="emacsclient -t"
+
+#git ================
 alias gpom='git push origin master'
 alias gpum='git pull origin master'
 alias gsas='git status'
