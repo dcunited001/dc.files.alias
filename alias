@@ -35,6 +35,9 @@ alias gbl='git branch'
 alias gdf='git diff'
 alias gdif='git diff'
 
+#reference ================
+alias learnemacs='less ~/.files/emacs/TOLEARN.md'
+
 #misc
 alias rf='rm -rf'
 alias df='df -h' #show remaining space in megs
