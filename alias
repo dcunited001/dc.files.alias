@@ -36,6 +36,7 @@ alias gdf='git diff'
 alias gdif='git diff'
 
 #reference ================
+alias lemacs='less ~/.files/emacs/TOLEARN.md'
 alias learnemacs='less ~/.files/emacs/TOLEARN.md'
 
 #misc
