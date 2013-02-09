@@ -16,6 +16,9 @@ alias lasym='la | grep -e -\>'
 #alias lah=only hidden
 #alias lahl=only hidden details
 
+#ln ================
+alias lns='ln -s'
+
 #emacs ================
 alias demacs="emacs --daemon"
 alias wemacs="emacsclient -c"
