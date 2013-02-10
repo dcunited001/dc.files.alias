@@ -49,3 +49,12 @@ alias df='df -h' #show remaining space in megs
 #change default shells
 alias set-zsh-default='chsh -s /bin/zsh'
 alias set-bash-default='chsh -s /bin/bash'
+
+
+#postgres =================
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l logfile start'
+alias pgstart2='postgres -D /usr/local/var/postgres'
+# pg extensions:
+#   SELECT * FROM pg_available_extensions;
+#   CREATE EXTENSION [extension name];
+
