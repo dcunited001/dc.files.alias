@@ -31,6 +31,13 @@ export KMAPPREFPC="$HOME/Library/Preferences/org.pqrs.PCKeyboardHack.plist"
 #alias firewall_trusted_apps='sudo ./socketfilterfw -l | grep TRUSTEDAPPS'
 
 #==========================
+# CRYPTO
+#==========================
+# after installing GNU coreutils with: 
+#   `brew install coreutils`
+#alias md5sum="gmd5sum" # just ended up linking it
+
+#==========================
 # REDIS
 #==========================
 alias redis_start="redis-server /usr/local/etc/redis.conf"
