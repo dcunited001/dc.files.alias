@@ -50,3 +50,12 @@ alias df='df -h' #show remaining space in megs
 #change default shells
 alias set-zsh-default='chsh -s /bin/zsh'
 alias set-bash-default='chsh -s /bin/bash'
+
+
+#==========================
+# RAILS
+#==========================
+alias rl_start="bundle exec rails server"
+alias rl_console="bundle exec rails console"
+alias rl_test="bundle exec rake test"
+
