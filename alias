@@ -79,13 +79,13 @@ alias set-bash-default='chsh -s /bin/bash'
 # RAILS
 #==========================
 #starting
-alias bers="bundle exec rails server"
-alias berc="bundle exec rails console"
+alias brs="bundle exec rails server"
+alias brc="bundle exec rails console"
 
 #testing
-alias begs="bundle exec guard start"
+alias bgs="bundle exec guard start"
 alias rkt="bundle exec rake test"
-alias rkdtp="bundle exec rake db:test:prepare"
-alias rkdbm="bundle exec rake db:migrate"
+alias rkprep="bundle exec rake db:test:prepare"
+alias rkmig="bundle exec rake db:migrate"
 alias rkdbc="bundle exec rake db:create"
 alias rkdbca="bundle exec rake db:create:all"
