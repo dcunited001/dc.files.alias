@@ -26,7 +26,10 @@ export KMAPPREF="$HOME/Library/Preferences/org.pqrs.KeyRemap4MacBook.plist"
 export KMAPPREFTOUCH="$HOME/Library/Preferences/org.pqrs.KeyRemap4MacBook.multitouchextension.plist"
 export KMAPPREFPC="$HOME/Library/Preferences/org.pqrs.PCKeyboardHack.plist"
 
-#osx admin commands
+#==========================
+# OSX NETWORKING
+#==========================
+alias dns_flush="dscacheutil -flushcache"
 # show approved firewall apps - requires sudo 
 #alias firewall_trusted_apps='sudo ./socketfilterfw -l | grep TRUSTEDAPPS'
 
@@ -40,27 +43,27 @@ export KMAPPREFPC="$HOME/Library/Preferences/org.pqrs.PCKeyboardHack.plist"
 #==========================
 # REDIS
 #==========================
-alias redis_start="redis-server /usr/local/etc/redis.conf"
-alias redis_svc_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist"
-alias redis_svc_create="ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents"
+alias rdstart="redis-server /usr/local/etc/redis.conf"
+alias rdsvc_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist"
+alias rdsvc_create="ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents"
 
 #==========================
 # ELASTIC SEARCH
 #==========================
-alias elastic_start="elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
-alias elastic_svc_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist"
-alias elastic_svc_create="ln -sfv /usr/local/opt/elasticsearch/*.plist ~/Library/LaunchAgents"
+alias esstart="elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
+alias essvc_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist"
+alias essvc_create="ln -sfv /usr/local/opt/elasticsearch/*.plist ~/Library/LaunchAgents"
 
 #==========================
 # POSTGRESQL
 #==========================
 #alias pg_connect='psql -U root ... '
-alias pg_start='pg_ctl -D /usr/local/var/postgres -l logfile start'
-alias pg_start2='postgres -D /usr/local/var/postgres'
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l logfile start'
+alias pgstart2='postgres -D /usr/local/var/postgres'
 
 #alias pg_svc_create="" #cp /usr/local/Cellar/postgresql/9.0.4/org.postgresql.postgres.plist ~/Library/LaunchAgents/
-alias pg_svc_start="launchctl load -w ~/Library/LaunchAgents/org.postgresql.postgres.plist"
-alias pg_init_db="initdb /usr/local/var/postgres"
+alias pgsvc_start="launchctl load -w ~/Library/LaunchAgents/org.postgresql.postgres.plist"
+alias pginit_db="initdb /usr/local/var/postgres"
 
 #pg admin:
 #alias pg_createuser='createuser [name] -s'
