@@ -6,13 +6,19 @@ export DFA=$DF/alias
 export DFZ=$DF/zsh
 export DFE=$DF/emacs
 export DFV=$DF/vim
+export DFK=$DF/kbd
 
 #===============================
 # EDIT DOTFILES
 #===============================
-alias ememacs="cd $DFE && emacs init.el"
+alias cdf="cd $DF"
+alias emem="cd $DFE && emacs init.el"
+alias emkem="cd $DFK && emacs bindkeys.emacs.mac"
+alias emrem="cd $DFE && emacs support/rails.el"
+
 alias emalias="cd $DFA && emacs alias"
 alias emzsh="cd $DFZ && emacs zshrc"
+alias emkey="cd $DFK && emacs KeyRemap4MacBook/private.xml"
 
 #refresh profiles
 alias sbash='source ~/.bashrc'
