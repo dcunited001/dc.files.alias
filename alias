@@ -1,3 +1,19 @@
+#TODO: add alias/function for adding todos! to .files mostly (eg adding todo to map emacs key)
+
+#vars (needs to move)
+export DF=$DOTFILES
+export DFA=$DF/alias
+export DFZ=$DF/zsh
+export DFE=$DF/emacs
+export DFV=$DF/vim
+
+#===============================
+# EDIT DOTFILES
+#===============================
+alias ememacs="cd $DFE && emacs init.el"
+alias emalias="cd $DFA && emacs alias"
+alias emzsh="cd $DFZ && emacs zshrc"
+
 #refresh profiles
 alias sbash='source ~/.bashrc'
 alias sbashp='source ~/.bash_profile'
