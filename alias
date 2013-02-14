@@ -27,6 +27,7 @@ alias temacs="emacsclient -t"
 
 #git ================
 alias gpom='git push origin master'
+alias gpushnew='git push -u origin ' ##
 alias gpum='git pull origin master'
 alias gsas='git status'
 alias gsta='git status'
@@ -55,7 +56,7 @@ alias set-bash-default='chsh -s /bin/bash'
 #==========================
 # RAILS
 #==========================
-alias rl_start="bundle exec rails server"
-alias rl_console="bundle exec rails console"
-alias rl_test="bundle exec rake test"
-
+alias bers="bundle exec rails server"
+alias berc="bundle exec rails console"
+alias berkt="bundle exec rake test"
+alias begs="bundle exec guard start"
