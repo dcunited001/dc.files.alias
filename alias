@@ -12,6 +12,7 @@ export DFK=$DF/kbd
 # YO DAWG! I HEARD YOU LIKE ALIASES!
 #===============================
 alias agr="alias | grep "
+alias hgr="history | grep "
 
 #===============================
 # EDIT DOTFILES
