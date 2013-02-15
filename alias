@@ -68,7 +68,38 @@ alias gbl='git branch'
 alias gdf='git diff'
 alias gdif='git diff'
 
-#reference ================
+#===============================
+# HISTORY
+#===============================
+# alias clear history
+# alias save history
+# alias open history in emacs/vim
+# function gist n lines of history
+
+# why 9? bc 21 is the largest single digit number
+alias h9="history | tail -n 9 " 
+alias h9g="history | tail -n 9 | grep " 
+
+# why 21? bc it's 2 and 1 are adjacent 
+#   and it's easier to hit adjacent keys 
+#   than to hit a repetitive keystroke
+alias h21="history | tail -n 21 "
+alias h21g="history | tail -n 21 | grep "
+
+# why 3? bc 10^3 = 100.  that's why
+alias h3="history | tails -n 100 "
+alias h3g="history | tails -n 100 | grep "
+
+#===============================
+# TOLEARN.md
+#===============================
+# trying to keep uptodate files of
+#   new thinkgs i've learned,
+#   but haven't committed to 
+#   muscle memory yet
+# trying to avoid hitting google
+#   for everything.  time killer!
+
 alias lemacs='less ~/.files/emacs/TOLEARN.md'
 alias learnemacs='less ~/.files/emacs/TOLEARN.md'
 
