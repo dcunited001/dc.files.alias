@@ -54,6 +54,7 @@ alias temacs="emacsclient -t"
 #alias remacs="" #start emacs in rinari mode
 
 #git ================
+alias gpo='git push origin '
 alias gpom='git push origin master'
 alias gpushnew='git push -u origin ' ##
 alias gpum='git pull origin master'
