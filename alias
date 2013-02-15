@@ -9,6 +9,11 @@ export DFV=$DF/vim
 export DFK=$DF/kbd
 
 #===============================
+# YO DAWG! I HEARD YOU LIKE ALIASES!
+#===============================
+alias agr="alias | grep "
+
+#===============================
 # EDIT DOTFILES
 #===============================
 alias cdf="cd $DF"
@@ -89,3 +94,7 @@ alias rkprep="bundle exec rake db:test:prepare"
 alias rkmig="bundle exec rake db:migrate"
 alias rkdbc="bundle exec rake db:create"
 alias rkdbca="bundle exec rake db:create:all"
+
+#zeus
+alias zs="zeus start"
+alias zt="zeus test"
