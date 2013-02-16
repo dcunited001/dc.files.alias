@@ -72,7 +72,7 @@ alias gfo="git fetch origin"
 # merge
 
 # rebase
-alias grm="git rebase master"
+alias germ="git rebase master"
 
 # status
 alias gsas='git status'
