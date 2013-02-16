@@ -11,8 +11,19 @@ export DFK=$DF/kbd
 #===============================
 # YO DAWG! I HEARD YOU LIKE ALIASES!
 #===============================
+# THESE ARE THE MOST IMPORTANT ALIASES!!!
+#   ESPECIALLY THE FIRST ONE: AGR=ALIAS | GREP
 alias agr="alias | grep "
 alias hgr="history | grep "
+alias pgr="ps aux | grep "
+
+#===============================
+# EMACS
+#===============================
+alias demacs="emacs --daemon"
+alias wemacs="emacsclient -c"
+alias temacs="emacsclient -t"
+#alias remacs="" #start emacs in rinari mode
 
 #===============================
 # EDIT DOTFILES
@@ -26,17 +37,25 @@ alias emalias="cd $DFA && emacs alias"
 alias emzsh="cd $DFZ && emacs zshrc"
 alias emkey="cd $DFK && emacs KeyRemap4MacBook/private.xml"
 
-#refresh profiles
-alias sbash='source ~/.bashrc'
-alias sbashp='source ~/.bash_profile'
-alias szsh='source ~/.zsh/.zshrc'
-
+#===============================
+# EDIT PROFILES
+#===============================
 #edit profiles
 alias vbash='vim ~/.bashrc'
 alias vbashp='vim ~/.bash_profile'
 alias vzsh='vim ~/.zsh/.zshrc'
 
-#ls ================
+#===============================
+# REFRESH PROFILES
+#===============================
+#refresh profiles
+alias sbash='source ~/.bashrc'
+alias sbashp='source ~/.bash_profile'
+alias szsh='source ~/.zsh/.zshrc'
+
+#===============================
+# LA
+#===============================
 alias la='ls -al'
 alias ll='ls -l'
 alias lsym='ll | grep -e -\>'
@@ -44,19 +63,14 @@ alias lasym='la | grep -e -\>'
 #alias lah=only hidden
 #alias lahl=only hidden details
 
-#ln ================
+#===============================
+# LN
+#===============================
 alias lns='ln -s'
-
-#emacs ================
-alias demacs="emacs --daemon"
-alias wemacs="emacsclient -c"
-alias temacs="emacsclient -t"
-#alias remacs="" #start emacs in rinari mode
 
 #===============================
 # GIT
 #===============================
-#push
 alias gpo='git push origin '
 alias gpom='git push origin master'
 alias gpushnew='git push -u origin ' ##
@@ -102,17 +116,19 @@ alias gdif='git diff'
 # alias open history in emacs/vim
 # function gist n lines of history
 
-# why 9? bc 21 is the largest single digit number
+# why 9? 
+#   bc 9 is the largest single digit number
 alias h9="history | tail -n 9 " 
 alias h9g="history | tail -n 9 | grep " 
 
-# why 21? bc it's 2 and 1 are adjacent 
+# why 21? 
+#   bc it's 2 and 1 are adjacent 
 #   and it's easier to hit adjacent keys 
-#   than to hit a repetitive keystroke
 alias h21="history | tail -n 21 "
 alias h21g="history | tail -n 21 | grep "
 
-# why 3? bc 10^3 = 100.  that's why
+# why 3? 
+#   bc 10^3 = 100.  that's why
 alias h3="history | tail -n 100 "
 alias h3g="history | tail -n 100 | grep "
 
@@ -133,10 +149,12 @@ alias learnemacs='less ~/.files/emacs/TOLEARN.md'
 alias rf='rm -rf'
 alias df='df -h' #show remaining space in megs
 
-#change default shells
+#==========================
+# change shells
+#==========================
 alias set-zsh-default='chsh -s /bin/zsh'
 alias set-bash-default='chsh -s /bin/bash'
-
+#alias set-fish-default='chsh -s /bin/fish'
 
 #==========================
 # RAILS
