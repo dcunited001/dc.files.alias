@@ -53,19 +53,44 @@ alias wemacs="emacsclient -c"
 alias temacs="emacsclient -t"
 #alias remacs="" #start emacs in rinari mode
 
-#git ================
+#===============================
+# GIT
+#===============================
+#push
 alias gpo='git push origin '
 alias gpom='git push origin master'
 alias gpushnew='git push -u origin ' ##
+#alias force-push='git push --force ' # validate args with function on this one
+
+# pull
 alias gpum='git pull origin master'
+
+# fetch
+alias gf="git fetch"
+alias gfo="git fetch origin"
+
+# merge
+
+# rebase
+alias grm="git rebase master"
+
+# status
 alias gsas='git status'
 alias gsta='git status'
+
+# add/rm
 alias gad='git add'
 alias grm='git rm'
+
+# commit
 alias gcom='git commit -m'
+
+# checkout/branch
 alias gch='git checkout'
 alias gchb='git checkout -b'
 alias gbl='git branch'
+
+# def
 alias gdf='git diff'
 alias gdif='git diff'
 
@@ -88,8 +113,8 @@ alias h21="history | tail -n 21 "
 alias h21g="history | tail -n 21 | grep "
 
 # why 3? bc 10^3 = 100.  that's why
-alias h3="history | tails -n 100 "
-alias h3g="history | tails -n 100 | grep "
+alias h3="history | tail -n 100 "
+alias h3g="history | tail -n 100 | grep "
 
 #===============================
 # TOLEARN.md
