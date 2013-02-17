@@ -72,7 +72,7 @@ alias lns='ln -s'
 # GIT
 #===============================
 alias gpo='git push origin '
-alias gpom='git push origin master'
+#alias gpom='git push origin master' # NVR EVR commit 2 master! Das Dangerous!
 alias gpushnew='git push -u origin ' ##
 #alias force-push='git push --force ' # validate args with function on this one
 
