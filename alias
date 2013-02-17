@@ -54,10 +54,10 @@ alias sbashp='source ~/.bash_profile'
 alias szsh='source ~/.zsh/.zshrc'
 
 #===============================
-# LA
+# LS
 #===============================
-alias la='ls -al'
-alias ll='ls -l'
+alias la='ls -alhG'
+alias ll='ls -lhG'
 alias lsym='ll | grep -e -\>'
 alias lasym='la | grep -e -\>'
 #alias lah=only hidden
