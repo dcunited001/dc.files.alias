@@ -133,10 +133,15 @@ alias h3="history | tail -n 100 "
 alias h3g="history | tail -n 100 | grep "
 
 #===============================
+# DIG - DNS INFO GROPER
+#===============================
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+#===============================
 # TOLEARN.md
 #===============================
 # trying to keep uptodate files of
-#   new thinkgs i've learned,
+#   new things i've learned,
 #   but haven't committed to 
 #   muscle memory yet
 # trying to avoid hitting google
