@@ -138,6 +138,11 @@ alias h3g="history | tail -n 100 | grep "
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 #===============================
+# CHEAT SHEETS (opens urls)
+#===============================
+alias cheatminitest="open http://cheat.errtheblog.com/s/minitest"
+
+#===============================
 # TOLEARN.md
 #===============================
 # trying to keep uptodate files of
