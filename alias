@@ -160,11 +160,16 @@ alias rf='rm -rf'
 alias df='df -h' #show remaining space in megs
 
 #==========================
-# change shells
+# CHANGE SHELLS
 #==========================
 alias set-zsh-default='chsh -s /bin/zsh'
 alias set-bash-default='chsh -s /bin/bash'
 #alias set-fish-default='chsh -s /bin/fish'
+
+#==========================
+# GEMS
+#==========================
+alias gemd="gem list -d "
 
 #==========================
 # RAILS
