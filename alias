@@ -174,11 +174,14 @@ alias gemd="gem list -d "
 #==========================
 # RAILS
 #==========================
-#starting
+
+#__________________________
+# starting
 alias brs="bundle exec rails server"
 alias brc="bundle exec rails console"
 
-#testing
+#__________________________
+# testing
 alias bgs="bundle exec guard start"
 alias rkt="bundle exec rake test"
 alias rkprep="bundle exec rake db:test:prepare"
@@ -186,6 +189,24 @@ alias rkmig="bundle exec rake db:migrate"
 alias rkdbc="bundle exec rake db:create"
 alias rkdbca="bundle exec rake db:create:all"
 
-#zeus
+#__________________________
+# zeus
 alias zs="zeus start"
 alias zt="zeus test"
+
+
+#==========================
+# APPEND NEW ALIASES QUICKLY!
+#==========================
+# quickly add new aliases after a pattern
+#   then sort out aliases later
+APALIPATTERN='#__# NEWALIAS #__#'
+
+alias apali="cat $HOME/.files/alias"
+#alias apalimac
+#alias apalinix
+
+#__________________________
+#__# NEWALIAS #__#
+
+
