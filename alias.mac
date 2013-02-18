@@ -105,3 +105,6 @@ alias mysql_connect="mysql -uroot"
 # To run as, for instance, user "mysql", you may need to `sudo`:
 #    sudo mysql_install_db ...options...
 # A "/etc/my.cnf" from another install may interfere with a Homebrew-built server starting up correctly.
+
+#__APALI__#
+
