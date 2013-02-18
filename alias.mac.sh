@@ -35,13 +35,13 @@ alias stre='open -a SourceTree'
 # OSX NETWORKING
 #==========================
 alias dns_flush="dscacheutil -flushcache"
-# show approved firewall apps - requires sudo 
+# show approved firewall apps - requires sudo
 #alias firewall_trusted_apps='sudo ./socketfilterfw -l | grep TRUSTEDAPPS'
 
 #==========================
 # CRYPTO
 #==========================
-# after installing GNU coreutils with: 
+# after installing GNU coreutils with:
 #   `brew install coreutils`
 #alias md5sum="gmd5sum" # just ended up linking it
 
@@ -76,7 +76,7 @@ alias pginit_db="initdb /usr/local/var/postgres"
 
 #note: with brew, default postgres user is your mac user!!
 #  \l    - list databases
-#  \du   - list users 
+#  \du   - list users
 
 # pg extensions:
 #   SELECT * FROM pg_available_extensions;
@@ -85,6 +85,11 @@ alias pginit_db="initdb /usr/local/var/postgres"
 #resources:
 #http://www.thegeekstuff.com/2009/04/15-practical-postgresql-database-adminstration-commands/
 #http://tammersaleh.com/posts/installing-postgresql-for-rails-3-1-on-lion
+
+# If you use -E option when doing issuing a "\di" command in psql it will
+#   show you the query that it performs to list the indexes.
+# psql [database] -E;
+# \di, etc
 
 #==========================
 # MYSQL
@@ -107,4 +112,3 @@ alias mysql_connect="mysql -uroot"
 # A "/etc/my.cnf" from another install may interfere with a Homebrew-built server starting up correctly.
 
 #__APALI__#
-
