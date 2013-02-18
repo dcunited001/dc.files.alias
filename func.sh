@@ -5,11 +5,11 @@
 # Alias Functions
 #===============================
 insert-alias(){
-  #name=$1; cmd=$2; file=$3; anchor=$4
+  #file=$1; anchor=$2; name=$3; cmd=$4;
   echo "==[ INSERTING ALIAS ]=="
-  echo "Searching for '$4' in $3"
-  alicmd="alias $1=$2"
-  awk-insert-below-and-replace $3 $4 $alicmd 1> /dev/null; }
+  echo "Searching for '$2' in $1"
+  alicmd="alias $3=$4"
+  awk-insert-below-and-replace $1 $2 $alicmd 1> /dev/null; }
 
 #===============================
 # Awk Functions
@@ -22,12 +22,12 @@ insert-alias(){
 
 awk-insert-above(){
   file=$1; rgx=$2; str=$3;
-  script="{ print (/$rgx/ ? \"$str\\n\" : \"\") \$0 } "
+  script="{ print (/$rgx$/ ? \"$str\\n\" : \"\") \$0 } "
   awk $script $file; }
 
 awk-insert-below(){
   file=$1; pattern=$2; str=$3;
-  script="{ print \$0 (/$rgx/ ? \"\\n$str\" : \"\"); } "
+  script="{ print \$0 (/$rgx$/ ? \"\\n$str\" : \"\"); } "
   awk $script $file; }
 
 awk-insert-below-and-replace(){
