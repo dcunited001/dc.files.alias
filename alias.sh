@@ -212,11 +212,12 @@ alias zt="zeus test"
 
 # quickly add new aliases after a pattern
 #   then sort out aliases later
-APALI_REGEX='#__APALI__#'
+APALI_REGEX=$(printf '%q' '#__APALI__#')
+#APALI_REGEX="__APALI__"
 
-alias apali="insert-alias $DFA/alias.sh '$APALI_REGEX' "
-alias apalim="insert-alias $DFA/alias.mac.sh '$APALI_REGEX' "
-alias apaliu="insert-alias $DFA/alias.ubu.sh '$APALI_REGEX' "
+alias apali="insert-alias $DFA/alias.sh $APALI_REGEX "
+alias apalim="insert-alias $DFA/alias.mac.sh $APALI_REGEX "
+alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 
 #__________________________
 # new aliases will magically appear here
