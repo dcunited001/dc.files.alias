@@ -206,18 +206,22 @@ alias zt="zeus test"
 #==========================
 # APPEND NEW ALIASES QUICKLY!
 #==========================
-# http://www.grymoire.com/Unix/Awk.html
-# http://www.ibm.com/developerworks/library/l-awk1/
+# APALI - a function to extract rainbows from unicorns
+#           using trade-secret cold-water extraction method
 
 # quickly add new aliases after a pattern
 #   then sort out aliases later
-APALIPATTERN='#__APALI__#'
+APALI_REGEX='#__APALI__#'
 
-alias apali="cat $HOME/.files/alias"
-#alias apalimac
-#alias apalinix
+alias apali="insert-alias $DFA/alias '$APALI_REGEX' "
+alias apalim="insert-alias $DFA/alias.mac '$APALI_REGEX' "
+alias apaliu="insert-alias $DFA/alias.ubu '$APALI_REGEX' "
 
 #__________________________
-#__# NEWALIAS #__#
+# new aliases will magically appear here
+#   to be sorted out later
 
+#__APALI__#
+alias tarcz=tar -czxf
+alias tarz=tar -zxf
 
