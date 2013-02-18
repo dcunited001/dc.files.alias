@@ -33,7 +33,8 @@ alias emem="cd $DFE && emacs init.el"
 alias emkem="cd $DFK && emacs bindkeys.emacs.mac"
 alias emrem="cd $DFE && emacs support/rails.el"
 
-alias emalias="cd $DFA && emacs alias"
+alias emalias="cd $DFA && emacs alias.sh"
+alias emfunc="cd $DFA && emacs func.sh"
 alias emzsh="cd $DFZ && emacs zshrc"
 alias emkey="cd $DFK && emacs KeyRemap4MacBook/private.xml"
 
@@ -116,18 +117,18 @@ alias gdif='git diff'
 # alias open history in emacs/vim
 # function gist n lines of history
 
-# why 9? 
+# why 9?
 #   bc 9 is the largest single digit number
-alias h9="history | tail -n 9 " 
-alias h9g="history | tail -n 9 | grep " 
+alias h9="history | tail -n 9 "
+alias h9g="history | tail -n 9 | grep "
 
-# why 21? 
-#   bc it's 2 and 1 are adjacent 
-#   and it's easier to hit adjacent keys 
+# why 21?
+#   bc it's 2 and 1 are adjacent
+#   and it's easier to hit adjacent keys
 alias h21="history | tail -n 21 "
 alias h21g="history | tail -n 21 | grep "
 
-# why 3? 
+# why 3?
 #   bc 10^3 = 100.  that's why
 alias h3="history | tail -n 100 "
 alias h3g="history | tail -n 100 | grep "
@@ -147,7 +148,7 @@ alias cheatminitest="open http://cheat.errtheblog.com/s/minitest"
 #===============================
 # trying to keep uptodate files of
 #   new things i've learned,
-#   but haven't committed to 
+#   but haven't committed to
 #   muscle memory yet
 # trying to avoid hitting google
 #   for everything.  time killer!
@@ -213,9 +214,9 @@ alias zt="zeus test"
 #   then sort out aliases later
 APALI_REGEX='#__APALI__#'
 
-alias apali="insert-alias $DFA/alias '$APALI_REGEX' "
-alias apalim="insert-alias $DFA/alias.mac '$APALI_REGEX' "
-alias apaliu="insert-alias $DFA/alias.ubu '$APALI_REGEX' "
+alias apali="insert-alias $DFA/alias.sh '$APALI_REGEX' "
+alias apalim="insert-alias $DFA/alias.mac.sh '$APALI_REGEX' "
+alias apaliu="insert-alias $DFA/alias.ubu.sh '$APALI_REGEX' "
 
 #__________________________
 # new aliases will magically appear here
@@ -224,4 +225,3 @@ alias apaliu="insert-alias $DFA/alias.ubu '$APALI_REGEX' "
 #__APALI__#
 alias tarcz=tar -czxf
 alias tarz=tar -zxf
-
