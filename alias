@@ -170,6 +170,15 @@ alias set-bash-default='chsh -s /bin/bash'
 # GEMS
 #==========================
 alias gemd="gem list -d "
+alias gemi="gem install "
+
+#==========================
+# RVM
+#==========================
+alias rvl="rvm list"
+alias rvlg="rvm gemset list"
+alias rvu="rvm use "
+alias rvug="rvm gemset use "
 
 #==========================
 # RAILS
@@ -194,13 +203,15 @@ alias rkdbca="bundle exec rake db:create:all"
 alias zs="zeus start"
 alias zt="zeus test"
 
-
 #==========================
 # APPEND NEW ALIASES QUICKLY!
 #==========================
+# http://www.grymoire.com/Unix/Awk.html
+# http://www.ibm.com/developerworks/library/l-awk1/
+
 # quickly add new aliases after a pattern
 #   then sort out aliases later
-APALIPATTERN='#__# NEWALIAS #__#'
+APALIPATTERN='#__APALI__#'
 
 alias apali="cat $HOME/.files/alias"
 #alias apalimac
