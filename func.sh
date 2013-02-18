@@ -26,18 +26,18 @@ awk-insert-above(){
   awk $script $file; }
 
 awk-insert-below(){
-  file=$1; pattern=$2; str=$3;
-  script="{ print \$0 (/$rgx$/ ? \"\\n$str\" : \"\"); } "
+  file=$1; rgx=$2; str=$3;
+  script="{ print \$0 (/$rgx$/ ? \"\\n$str\" : \"\") } "
   awk $script $file; }
-
-awk-insert-below-and-replace(){
-  filefoo=`get-temp-file awk-insert`;
-  awk-insert-below $@[@] > $filefoo;
-  cp $file $file.bak; mv $filefoo $file; }
 
 awk-insert-above-and-replace(){
   filefoo=`get-temp-file awk-insert`;
   awk-insert-above $@[@] > $filefoo;
+  cp $file $file.bak; mv $filefoo $file; }
+
+awk-insert-below-and-replace(){
+  filefoo=`get-temp-file awk-insert`;
+  awk-insert-below $@[@] > $filefoo;
   cp $file $file.bak; mv $filefoo $file; }
 
 #===============================
