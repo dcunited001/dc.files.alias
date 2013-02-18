@@ -27,6 +27,11 @@ export KMAPPREFTOUCH="$HOME/Library/Preferences/org.pqrs.KeyRemap4MacBook.multit
 export KMAPPREFPC="$HOME/Library/Preferences/org.pqrs.PCKeyboardHack.plist"
 
 #==========================
+# MISC APPLICATIONS
+#==========================
+alias stre='open -a SourceTree'
+
+#==========================
 # OSX NETWORKING
 #==========================
 alias dns_flush="dscacheutil -flushcache"
