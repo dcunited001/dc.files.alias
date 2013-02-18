@@ -223,6 +223,14 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # new aliases will magically appear here
 #   to be sorted out later
 
+# TODO: fix apali for multiple args =/ have to use quotes
+
 #__APALI__#
+alias vagbbt=vagrant basebox templates
+alias vagbbb=vagrant basebox build
+alias vagbbl=vagrant basebox list
+alias vagbrp=vagrant basebox repackage
+alias vagba=vagrant box add
+alias vagbl=vagrant box list
 alias tarcz=tar -czxf
 alias tarz=tar -zxf
