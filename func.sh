@@ -2,6 +2,16 @@
 # shell functions for all platforms
 
 #===============================
+# Alias Functions
+#===============================
+insert-alias(){
+  #name=$1; cmd=$2; file=$3; anchor=$4
+  echo "==[ INSERTING ALIAS ]=="
+  echo "Searching for '$4' in $3"
+  alicmd="alias $1=$2"
+  awk-insert-below-and-replace $3 $4 $alicmd 1> /dev/null; }
+
+#===============================
 # Awk Functions
 #===============================
 # Examples
