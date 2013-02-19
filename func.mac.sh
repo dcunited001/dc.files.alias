@@ -2,6 +2,13 @@
 source $HOME/.files/alias/func.sh;
 
 #===============================
+# Searching
+#===============================
+queryjoin() { echo "$*" | sed s/\ /+/g; }
+# eventually abstract this function to work with
+#   more than just +, but for now, who cares
+
+#===============================
 # Search Google
 #===============================
 # using perl for brevity, for pure bash function:
@@ -9,7 +16,7 @@ source $HOME/.files/alias/func.sh;
 uriescape() { echo $_ | perl -MURI::Escape -lne 'print uri_escape($_)'; }
 
 # site-wide codewall search via google
-ggljoin() { echo "$*" | sed s/\ /+/g }
+ggljoin() { queryjoin $@; }
 
 # $1 is the site, the rest is the query
 #   returns the parameter needed to pass to google.com/search?q=
@@ -30,6 +37,15 @@ cwall() { open https://coderwall.com/p/t/$1 }
 
 # search coderwall by site-wide google search:
 cwallsite() { gglsite "coderwall.com" $@[@] }
+
+#===============================
+# Search Api Dock
+#===============================
+adock() { url="http://apidock.com/$1"; shift; query=`queryjoin $@[@]`;
+  open "$url/search?query=$query"; }
+adockrb() { adock 'ruby' $@; }
+adockra() { adock 'rails' $@; }
+adocksp() { adock 'rspec' $@; }
 
 #===============================
 # RVM
