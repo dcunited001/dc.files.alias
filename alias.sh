@@ -226,6 +226,11 @@ alias vagbl="vagrant box list"
 APALI_REGEX=$(printf '%q' '#__APALI__#')
 #APALI_REGEX="__APALI__"
 
+# NOTE: FOR NOW THE QUOTING FOR THESE IS A LITTLE BROKE
+#   YOU MUST SURROUND THE SECOND ARG with "'cmd'"
+# EG:  apali foo "'bar --opts opt1 arg1 arg2 '"
+#  TRIPLE QUOTES -- IT'S A HAT TRICK LOLOLOL SMH
+
 alias apali="insert-alias $DFA/alias.sh $APALI_REGEX "
 alias apalim="insert-alias $DFA/alias.mac.sh $APALI_REGEX "
 alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
@@ -235,13 +240,13 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 #   to be sorted out later
 
 # TODO: fix apali for multiple args =/ have to use quotes
+# TODO: apali needs to pass quotes.
+# TODO: just change it to use sed. FML lol
 
 #__APALI__#
-alias vagbbt=vagrant basebox templates
-alias vagbbb=vagrant basebox build
-alias vagbbl=vagrant basebox list
-alias vagbrp=vagrant basebox repackage
-alias vagba=vagrant box add
-alias vagbl=vagrant box list
-alias tarcz=tar -czxf
-alias tarz=tar -zxf
+alias gbD='git branch -D '
+alias gbd='git branch -d '
+alias gkmdf='git mergetool -y -t Kaleidoscope'
+alias gkdf='git difftool -y -t Kaleidoscope'
+alias tarcz="tar -czxf"
+alias tarz="tar -zxf"
