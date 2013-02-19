@@ -206,7 +206,17 @@ alias zs="zeus start"
 alias zt="zeus test"
 
 #==========================
-# APPEND NEW ALIASES QUICKLY!
+# VAGRANT
+#==========================
+alias vagbbt="vagrant basebox templates"
+alias vagbbb="vagrant basebox build"
+alias vagbbl="vagrant basebox list"
+alias vagbrp="vagrant box repackage"
+alias vagba="vagrant box add"
+alias vagbl="vagrant box list"
+
+#==========================
+# APPEND NEW ALIASES QUICKLY
 #==========================
 # APALI - a function to extract rainbows from unicorns
 #           using trade-secret cold-water extraction method
