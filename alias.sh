@@ -104,6 +104,7 @@ alias gcom='git commit -m'
 alias gch='git checkout'
 alias gchb='git checkout -b'
 alias gbl='git branch'
+gchr() { git checkout -b "origin/$1"; }
 
 # def
 alias gdf='git diff'
