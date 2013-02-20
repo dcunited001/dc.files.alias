@@ -8,6 +8,8 @@ export DFE=$DF/emacs
 export DFV=$DF/vim
 export DFK=$DF/kbd
 
+#glock() { kill -$("$1") $2 }
+
 #===============================
 # YO DAWG! I HEARD YOU LIKE ALIASES!
 #===============================
