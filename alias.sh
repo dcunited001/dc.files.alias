@@ -265,9 +265,6 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
-alias gbD='git branch -D '
-alias gbd='git branch -d '
-alias gkmdf='git mergetool -y -t Kaleidoscope'
-alias gkdf='git difftool -y -t Kaleidoscope'
+alias brewd='brew list -d '
 alias tarcz="tar -czxf"
 alias tarz="tar -zxf"
