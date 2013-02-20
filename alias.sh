@@ -74,6 +74,7 @@ alias lns='ln -s'
 #===============================
 # GIT
 #===============================
+#push
 alias gpo='git push origin '
 #alias gpom='git push origin master' # NVR EVR commit 2 master! Das Dangerous!
 alias gpushnew='git push -u origin ' ##
@@ -106,11 +107,25 @@ alias gcom='git commit -m'
 alias gch='git checkout'
 alias gchb='git checkout -b'
 alias gbl='git branch'
+alias gbD='git branch -D '
+alias gbd='git branch -d '
 gchr() { git checkout -b "origin/$1"; }
 
-# def
+# diff
 alias gdf='git diff'
 alias gdif='git diff'
+
+# difftools
+alias gkmdf='git mergetool -y -t Kaleidoscope'
+alias gkdf='git difftool -y -t Kaleidoscope'
+
+#===============================
+# HUB
+#===============================
+# http://defunkt.io/hub/
+# https://github.com/defunkt/hub#commands
+# USE HUB!!! no, really lol `brew install hub`
+#   for pull requests, forks and spoons
 
 #===============================
 # HISTORY
