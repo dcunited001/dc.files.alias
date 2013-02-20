@@ -219,7 +219,11 @@ alias rkdbca="bundle exec rake db:create:all"
 
 #__________________________
 # zeus
-alias zs="zeus start"
+alias zst="zeus start"
+alias zs="zeus server"
+alias zg="zeus generate"
+alias zr="zeus rake"
+alias zc='zeus console'
 alias zt="zeus test"
 
 #==========================
