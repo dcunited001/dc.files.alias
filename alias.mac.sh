@@ -29,12 +29,12 @@ export KMAPPREFPC="$HOME/Library/Preferences/org.pqrs.PCKeyboardHack.plist"
 #==========================
 # MISC APPLICATIONS
 #==========================
-alias stre='open -a SourceTree'
+alias str='open -a SourceTree'
 
 #==========================
 # OSX NETWORKING
 #==========================
-alias dns_flush="dscacheutil -flushcache"
+alias dnsflush="dscacheutil -flushcache"
 # show approved firewall apps - requires sudo
 #alias firewall_trusted_apps='sudo ./socketfilterfw -l | grep TRUSTEDAPPS'
 
