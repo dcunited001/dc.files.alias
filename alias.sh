@@ -81,7 +81,7 @@ alias gpushnew='git push -u origin ' ##
 #alias force-push='git push --force ' # validate args with function on this one
 
 # pull
-alias gpum='git pull origin master'
+alias glm='git pull origin master'
 
 # fetch
 alias gf="git fetch"
@@ -128,6 +128,11 @@ alias gkdf='git difftool -y -t Kaleidoscope'
 #   for pull requests, forks and spoons
 
 #===============================
+# MISC
+#===============================
+alias rgs="xargs -I -=-="
+
+#===============================
 # HISTORY
 #===============================
 # alias clear history
@@ -160,6 +165,7 @@ alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 # CHEAT SHEETS (opens urls)
 #===============================
 alias cheatminitest="open http://cheat.errtheblog.com/s/minitest"
+alias cheatcapy="open http://makandracards.com/makandra/1422-capybara-the-missing-api"
 
 #===============================
 # TOLEARN.md
@@ -198,6 +204,7 @@ alias rvl="rvm list"
 alias rvlg="rvm gemset list"
 alias rvu="rvm use "
 alias rvug="rvm gemset use "
+alias rvm-update="rvm get stable"
 
 #==========================
 # RAILS
@@ -219,6 +226,7 @@ alias rkdbca="bundle exec rake db:create:all"
 
 #__________________________
 # zeus
+# https://makandracards.com/makandra/1422-capybara-the-missing-api
 alias zst="zeus start"
 alias zs="zeus server"
 alias zg="zeus generate"
@@ -256,6 +264,10 @@ alias apali="insert-alias $DFA/alias.sh $APALI_REGEX "
 alias apalim="insert-alias $DFA/alias.mac.sh $APALI_REGEX "
 alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 
+# also you will have wierd bugs if you are trying to insert
+#   something that your shell session already recognizes
+#   as an alias!
+
 #__________________________
 # new aliases will magically appear here
 #   to be sorted out later
@@ -265,6 +277,15 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
+alias gre='grep -e'
+alias forsbg='fors &> /dev/null'
+alias fors='bundle exec foreman start -f Procfile.dev'
+alias cr='cp -R'
+alias rw='rspec-web'
+alias gsh='git stash '
+alias gshp='git stash pop '
+alias gresk='git rebase --skip'
+alias grecon='git rebase --continue'
 alias brewd='brew list -d '
 alias tarcz="tar -czxf"
 alias tarz="tar -zxf"
