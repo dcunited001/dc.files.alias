@@ -156,3 +156,9 @@ get-temp-file(){
   tmpfile=`mktemp /tmp/${tmpfoo}.XXXXXX` || exit 1
   echo $tmpfile
 }
+
+#==========================
+# SSH/MD5
+#==========================
+
+ssh-new-key() { ssh-keygen -t rsa -C $1; }
