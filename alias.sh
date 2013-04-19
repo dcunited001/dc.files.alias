@@ -119,6 +119,13 @@ alias gdif='git diff'
 alias gkmdf='git mergetool -y -t Kaleidoscope'
 alias gkdf='git difftool -y -t Kaleidoscope'
 
+# gls
+
+# gitar
+alias gitara='gitar $ra'
+
+#gitlist
+
 #===============================
 # HUB
 #===============================
