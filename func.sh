@@ -14,6 +14,9 @@ git-sync-master(){
     git checkout $1 &&
     git rebase master; }
 
+alias gri="git-rebase-int"
+git-rebase-int() { git rebase -i HEAD~$1 }
+
 #!/bin/sh -x
 ###git name-rev is fail
 #CURRENT=`git branch | grep '\*' | awk '{print $2}'`
