@@ -299,9 +299,21 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
+alias gemp='gem push'
+alias gemb='gem build'
+alias c-df='cd /Users/dc/.files'
+alias c-bash='cd ~/dev/bash'
+alias c-ubu='cd ~/dev/ubuntu'
+alias c-sec='cd ~/dev/sec'
+alias c-no='cd ~/dev/node'
+alias c-mru='cd ~/dev/mruby'
+alias c-dro='cd ~/dev/droid'
+alias c-boom='cd ~/dev/boomalang'
+alias c-r='cd ~/dev/r'
+alias c-ra='cd ~/dev/rails'
+alias c-g='cd ~/dev/ruby/gems'
+alias c-rb='cd ~/dev/ruby'
 alias gre='grep -e'
-alias forsbg='fors &> /dev/null'
-alias fors='bundle exec foreman start -f Procfile.dev'
 alias cr='cp -R'
 alias rw='rspec-web'
 alias gsh='git stash '
