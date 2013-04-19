@@ -39,6 +39,26 @@ cwall() { open https://coderwall.com/p/t/$1 }
 cwallsite() { gglsite "coderwall.com" $@[@] }
 
 #===============================
+# Search Github
+#===============================
+ghubquery() { echo "https://github.com/search?ref=cmdform&q=$(queryjoin $*)"; }
+ghubquerylang() { lang=`uriescape $1`; shift; echo "$(ghubquery $*)&l=$lang"; }
+
+ghub() { query=`ghubquery $*`; echo $query; open $query; }            # search github
+ghublang() { query=`ghubquerylang $*`; echo $query; open $query; }    # search github by language
+ghubrb() { query=`ghubquerylang ruby $*`; echo $query; open $query; } # search github for ruby
+
+#===============================
+# Search Gist
+#===============================
+gistquery() { echo "https://gist.github.com/search?q=$(queryjoin $*)"; }
+gistquerylang() { lang=`uriescape $1`; shift; echo "$(ghubquery $*)&l=$lang"; }
+
+gists() { query=`gistquery $*`; echo $query; open $query; }
+gistslang() { query=`gistquerylang $*`; echo $query; open $query; }
+gistsrb() { query=`gistquerylang ruby $*`; echo $query; open $query; }
+
+#===============================
 # Search Api Dock
 #===============================
 adock() { url="http://apidock.com/$1"; shift; query=`queryjoin $@[@]`;
