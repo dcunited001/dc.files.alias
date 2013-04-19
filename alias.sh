@@ -214,6 +214,21 @@ alias rvug="rvm gemset use "
 alias rvm-update="rvm get stable"
 
 #==========================
+# GUARD
+#==========================
+
+#==========================
+# FOREMAN
+#==========================
+# bundle exec necessary?
+alias 4mc="bundle exec foreman check -f Procfile"
+alias 4ms="bundle exec foreman start -f Procfile"
+alias 4md="bundle exec foreman start -f Procfile.dev"
+alias 4mdmem="bundle exec foreman start -f Procfile.mem"
+#alias forsbg='fors &> /dev/null'
+#alias fors='bundle exec foreman start -f Procfile.dev'
+
+#==========================
 # RAILS
 #==========================
 
