@@ -104,6 +104,7 @@ alias grm='git rm'
 alias gcom='git commit -m'
 
 # checkout/branch
+alias gcd='git checkout develop'
 alias gch='git checkout'
 alias gchb='git checkout -b'
 alias gbl='git branch'
