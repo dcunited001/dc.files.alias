@@ -201,3 +201,9 @@ get-temp-file(){
 #==========================
 
 ssh-new-key() { ssh-keygen -t rsa -C $1; }
+
+#==========================
+# GPG
+#==========================
+
+gpg-verify-gz() { gzip -cd $1 | gpg --verify $2 }
