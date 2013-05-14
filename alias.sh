@@ -301,6 +301,9 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
+alias herlo='heroku login'
+alias heropush='git push heroku master'
+alias herkad='heroku keys:add '
 alias gemp='gem push'
 alias gemb='gem build'
 alias c-df='cd /Users/dc/.files'
