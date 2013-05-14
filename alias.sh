@@ -327,3 +327,4 @@ alias grecon='git rebase --continue'
 alias brewd='brew list -d '
 alias tarcz="tar -czxf"
 alias tarz="tar -zxf"
+alias ncns="cd ~/dev/rails/incense"
