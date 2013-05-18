@@ -301,6 +301,12 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
+alias lgr='ls -al | grep '
+alias c-br='cd /Volumes/dev/homebrew'
+alias c-da='cd /Volumes/data'
+alias c-nw='cd /Volumes/dev/neighbornet/sfw'
+alias c-n='cd /Volumes/dev/neighbornet'
+alias c-d='cd /Volumes/dev'
 alias herlo='heroku login'
 alias heropush='git push heroku master'
 alias herkad='heroku keys:add '
