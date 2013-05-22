@@ -231,3 +231,7 @@ EOF
 EOF
 
 }
+
+backup-plist () {
+  cp $1 .
+  plutil -convert xml1 -o $1.xml $1 }
