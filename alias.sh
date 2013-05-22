@@ -301,6 +301,8 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
+alias emfi='cd /Users/dc/.files && emacs README.md'
+alias c-h='cd ~/dev/homebrew'
 alias lgr='ls -al | grep '
 alias c-br='cd /Volumes/dev/homebrew'
 alias c-da='cd /Volumes/data'
