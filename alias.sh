@@ -14,10 +14,12 @@ export DFK=$DF/kbd
 # YO DAWG! I HEARD YOU LIKE ALIASES!
 #===============================
 # THESE ARE THE MOST IMPORTANT ALIASES!!!
-#   ESPECIALLY THE FIRST ONE: AGR=ALIAS | GREP
-alias agr="alias | grep "
-alias hgr="history | grep "
-alias pgr="ps aux | grep "
+#   * ESPECIALLY THE FIRST ONE: AGR=ALIAS | GREP
+#   * changed to use functions
+agr() { alias | grep -e $1; }
+hgr() { history | grep -e $1; }
+pgr() { ps aux | grep -e $1; }
+lgr() { ls -al | grep -e $1; }
 
 #===============================
 # EMACS
