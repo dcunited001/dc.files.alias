@@ -57,6 +57,32 @@ alias sbashp='source ~/.bash_profile'
 alias szsh='source ~/.zsh/.zshrc'
 
 #===============================
+# CD
+#===============================
+alias c-v='cd ~/ops/vagrant'
+alias c-o='cd ~/ops'
+alias c-h='cd ~/dev/homebrew'
+alias c-br='cd ~/dev/homebrew'
+alias c-da='cd /Volumes/data'
+alias c-nw='cd /Volumes/dev/neighbornet/sfw'
+alias c-n='cd /Volumes/dev/neighbornet'
+alias c-d='cd /Volumes/dev'
+alias c-df='cd /Users/dc/.files'
+alias c-bash='cd ~/dev/bash'
+alias c-ubu='cd ~/dev/ubuntu'
+alias c-sec='cd ~/dev/sec'
+alias c-no='cd ~/dev/node'
+alias c-mru='cd ~/dev/mruby'
+alias c-dro='cd ~/dev/droid'
+alias c-boom='cd ~/dev/boomalang'
+alias c-r='cd ~/dev/r'
+alias c-ra='cd ~/dev/rails'
+alias c-g='cd ~/dev/ruby/gems'
+alias c-rb='cd ~/dev/ruby'
+alias c-e='cd ~/dev/emacs'
+alias c-bf='cd ~/dev/emacs/buffless'
+
+#===============================
 # LS
 #===============================
 alias la='ls -alhG'
@@ -122,6 +148,12 @@ alias gkmdf='git mergetool -y -t Kaleidoscope'
 alias gkdf='git difftool -y -t Kaleidoscope'
 
 # gls
+
+# stash
+alias gsh='git stash '
+alias gshp='git stash pop '
+alias gresk='git rebase --skip'
+alias grecon='git rebase --continue'
 
 # gitar
 alias gitara='gitar $ra'
@@ -203,8 +235,13 @@ alias set-bash-default='chsh -s /bin/bash'
 #==========================
 # GEMS
 #==========================
+# getting gem info
 alias gemd="gem list -d "
 alias gemi="gem install "
+
+# building gems
+alias gemp='gem push'
+alias gemb='gem build'
 
 #==========================
 # RVM
@@ -269,6 +306,14 @@ alias vagba="vagrant box add"
 alias vagbl="vagrant box list"
 
 #==========================
+# HEROKU
+#==========================
+alias herlo='heroku login'
+alias heropush='git push heroku master'
+alias herkad='heroku keys:add '
+
+
+#==========================
 # APPEND NEW ALIASES QUICKLY
 #==========================
 # APALI - a function to extract rainbows from unicorns
@@ -301,40 +346,10 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
-alias emfi='cd /Users/dc/.files && emacs README.md'
-alias c-h='cd ~/dev/homebrew'
-alias lgr='ls -al | grep '
-alias c-br='cd /Volumes/dev/homebrew'
-alias c-da='cd /Volumes/data'
-alias c-nw='cd /Volumes/dev/neighbornet/sfw'
-alias c-n='cd /Volumes/dev/neighbornet'
-alias c-d='cd /Volumes/dev'
-alias herlo='heroku login'
-alias heropush='git push heroku master'
-alias herkad='heroku keys:add '
-alias gemp='gem push'
-alias gemb='gem build'
-alias c-df='cd /Users/dc/.files'
-alias c-bash='cd ~/dev/bash'
-alias c-ubu='cd ~/dev/ubuntu'
-alias c-sec='cd ~/dev/sec'
-alias c-no='cd ~/dev/node'
-alias c-mru='cd ~/dev/mruby'
-alias c-dro='cd ~/dev/droid'
-alias c-boom='cd ~/dev/boomalang'
-alias c-r='cd ~/dev/r'
-alias c-ra='cd ~/dev/rails'
-alias c-g='cd ~/dev/ruby/gems'
-alias c-rb='cd ~/dev/ruby'
-alias c-e='cd ~/dev/emacs'
-alias c-bf='cd ~/dev/emacs/buffless'
+alias emfi='cd /Users/dc/.files && emacs README'
 alias gre='grep -e'
 alias cr='cp -R'
 alias rw='rspec-web'
-alias gsh='git stash '
-alias gshp='git stash pop '
-alias gresk='git rebase --skip'
-alias grecon='git rebase --continue'
 alias brewd='brew list -d '
 alias tarcz="tar -czxf"
 alias tarz="tar -zxf"
