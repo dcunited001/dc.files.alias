@@ -16,10 +16,10 @@ export DFK=$DF/kbd
 # THESE ARE THE MOST IMPORTANT ALIASES!!!
 #   * ESPECIALLY THE FIRST ONE: AGR=ALIAS | GREP
 #   * changed to use functions
-agr() { alias | grep -e $1; }
-hgr() { history | grep -e $1; }
-pgr() { ps aux | grep -e $1; }
-lgr() { ls -al | grep -e $1; }
+agr() { alias | grep -e "$*"; }
+hgr() { history | grep -e "$*"; }
+pgr() { ps aux | grep -e "$*"; }
+lgr() { ls -al | grep -e "$*"; }
 
 #===============================
 # EMACS
