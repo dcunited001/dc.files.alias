@@ -2,6 +2,48 @@
 # shell functions for all platforms
 
 
+#===============================
+# Hub Auth
+#===============================
+
+#hub-user-auth() { 
+#    
+#    read -s GITHUB_USERNAME }
+
+#===============================
+# Git Branch Vars
+#===============================
+
+# examples of Vars i use to speed up development on multiple branches
+
+# These vars, combined with gitar, gitlist, gull, gync, and gush
+#   ARE AWESOME!
+
+#===============================
+### current branches
+# g=dc/feature/cool-feature-bro
+# gg=dc/feature/user-is-rad
+# ggg=dc/feature/user-friends-friends-friends
+ 
+# gh=dc/hotfix/admin-user-no-friends
+ 
+# gt=dc/test/some-cool-test-refactors
+# gtt=dc/test/integration-test
+ 
+# gr=dc/refactor/db-deez
+# grr=dc/refactor/something-totally-awesome
+ 
+# #these arrays can all be used with `gitar $rg | gitlist "git pull origin -=-="`
+# # r for array
+# rg=($g $gg $ggg)
+# rt=($gt $gtt)
+# rh=($gh)
+# rr=($gr $grr)
+# ra=(${rg[@]} ${rt[@]} ${rh[@]} ${rr[@]})
+ 
+# also, you can use
+#   `gls [user] | gitlist "git pull origin -=-="`
+#===============================
 
 #===============================
 # Git Macros
@@ -16,6 +58,137 @@ git-sync-master(){
 
 alias gri="git-rebase-int"
 git-rebase-int() { git rebase -i HEAD~$1 }
+
+
+#===============
+# gull
+# gync
+# gush
+# gushforce
+#
+# mostly using this now
+#   really easy to use, 
+#   with bash arrays for branch lists
+#===============
+gull() { gitar $* | gitlist "git pull --rebase origin -=-=; if [ \"\$?\" -ne 0 ]; then echo [[COULD NOT PULL]] -=-=; git rebase --abort; fi;" }
+gync() { gitar $* | gitlist "git rebase master; if [ \"\$?\" -ne 0 ]; then echo [[COULD NOT REBASE]] -=-=; git rebase --abort; fi;" }
+gush() { gitar $* | gitlist "git push origin -=-=; if [ \"\$?\" -ne 0 ]; then echo [[COULD NOT PUSH]] -=-=; fi; "}
+gushforce() { gitar $* | gitlist "git push --force origin -=-=; if [ \"\$?\" -ne 0 ]; then echo [[COULD NOT FORCE PUSH]] -=-=; fi; "}
+ 
+#===============
+# gitar 
+# gitlist
+#===============
+# make sure you start on a branch that's not master!
+#   if your script uses gwip/grewip (like grbsync)
+# removing the wip commit from every rebased branch is a pain
+#===============
+gitlist() { xargs -I -=-= sh -c "git checkout -=-=; $@"; }
+gls() {
+  # swap $1 & $2?
+  git branch $2 |
+    grep "$1" |
+    sed "s/^.*\\($1\\/.*\\)$/\\1/"; }
+ 
+glstatus() { gls | gitlist "git status"; }
+glspull() {
+  glspattern=$1
+  glsremote=$2
+ 
+  # TODO: filter out the local and up to date branches
+  gls $glspattern | gitlist "git pull $glsremote -=-="; }
+ 
+# takes an array arg and
+#   joins it with newlines basically
+# can be piped to gitlist
+gitar() { echo $* | xargs -n1 echo }
+ 
+#===============
+# gwip & grewip are really cool
+#   & allow you to not
+#===============
+# make sure you start on a branch that's not master!
+#   if your script uses gwip/grewip (like grbsync)
+#===============
+ 
+gwip() {
+  gwipname=${1:-wip}-`date +%s`
+  git add -A;
+  git ls-files --deleted -z |
+    xargs -0 -I {} git rm {};
+  git commit -m $gwipname;
+  echo $gwipname; }
+ 
+grewip() {
+  git log -n 1 |
+    grep -q -c $1 &&
+      git reset HEAD~1; }
+ 
+#===============
+# but these are cool too,
+# 
+# especially gbrsync
+#===============
+# make sure you start on a branch that's not master!
+#   if your script uses gwip/grewip (like grbsync)
+#===============
+ 
+gitbruser() {
+  git branch $2 |
+    grep "$1" |
+    sed "s/^.*\\($1\\/.*\\)$/\\1/"; }
+ 
+gbrdc() { gitbruser dc $1 }
+gbrsdc() { gbrdc --no-merged | rgs git checkout -=-=; }
+ 
+gbrsync() {
+  if [ $# -eq 0 ] ; then
+    echo 'user branch folder required (e.g. dc)'
+    return 0
+  fi
+ 
+  gbsfolder=$1
+  gbsremote=${2:-origin}
+  gbshead=${3:-master}
+ 
+  # WIP_saved against the current branch
+  gbscur=$(gcurbr)
+  gbswip=$(gwip)
+ 
+  # TODO: backup branches?
+ 
+  git checkout $gbshead
+  git fetch $gbsremote
+  git pull $gbsremote $gbshead
+[1;5A] 
+  # TODO: split up into multiple functions 4 xargs
+  gitbruser $gbsfolder --no-merged |
+    xargs -I -=-= sh -c "git checkout -=-=; git rebase $gbshead; if [ \"\$?\" -ne 0 ]; then git rebase --abort; fi;"
+  gch $gbscur
+  grewip $gbswip;
+}
+ 
+gcurbr-ref(){ git symbolic-ref -q HEAD; }
+gcurbr() { git rev-parse --abbrev-ref HEAD; }
+ 
+gtrybe() {
+  # this one's probably not working at the moment
+  # shell functions don't work with xargs
+ 
+  # tries to rebase; saves WIP branch;
+  #   always resets, but rebase will stick
+  #   if there's no conflicts
+  gtrybr=$1
+  gtryhead=$2
+ 
+  git checkout $gtrybr
+  git rebase $gtryhead;  # assume gtrybr has fetched/pulled
+ 
+  if [ "$?" -ne 0 ]; then
+    git rebase --abort
+    echo Resetting `gcurbr`: couldnt rebase $gtrybr.
+  fi;
+}
 
 #!/bin/sh -x
 ###git name-rev is fail
