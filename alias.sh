@@ -348,6 +348,7 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
+alias reads='read -s'
 alias emfi='cd /Users/dc/.files && emacs README'
 alias gre='grep -e'
 alias cr='cp -R'
