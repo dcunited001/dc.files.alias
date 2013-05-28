@@ -5,10 +5,10 @@
 #===============================
 # Hub Auth
 #===============================
-
-#hub-user-auth() { 
-#    
-#    read -s GITHUB_USERNAME }
+alias hub="hub-auto-auth; hub"
+hub-auto-auth() {
+  if [ -n $GITHUB_USER ]; then read -s GITHUB_USER; else echo "USERNAME: $GITHUB_USER"; fi
+  if [ -n $GITHUB_PASSWORD ]; then read -s GITHUB_PASSWORD; else echo "PASSWORD: ..."; fi; }
 
 #===============================
 # Git Branch Vars
