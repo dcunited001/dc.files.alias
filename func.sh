@@ -370,6 +370,11 @@ get-temp-file(){
 }
 
 #==========================
+# SHAWESHUM BRO
+#==========================
+# shasum [file]
+
+#==========================
 # SSH/MD5
 #==========================
 
@@ -380,3 +385,57 @@ ssh-new-key() { ssh-keygen -t rsa -C $1; }
 #==========================
 
 gpg-verify-gz() { gzip -cd $1 | gpg --verify $2 }
+
+#==========================
+# RASPIAN
+#==========================
+
+# use `df -h` to list disk images
+
+# SD Card Steps:
+#
+# http://elinux.org/RPi_Easy_SD_Card_Setup
+#
+# 1) start with SD card unmounted and `df -h`
+# 2) insert & mount SD card and `df -h`
+# 3) located the name of the mounted SD card, it's the line that was added
+# 4) get the r-name of the SD card (E.G. /dev/disk3s2 => /dev/rdisk3)
+# 5) download the rasbpian zip.  
+# 6) verify zip with `shasum archlinux-hf-2013-02-11.zip`
+# 7) extracting should result in an .img file.
+# 8) image the SD card with `sudo dd bs=1m if=2013-02-09-wheezy-raspbian.img of=/dev/rdisk3`
+# 9) don't forget to unmount the SD card
+
+# Setting up SSH to autostart (OSX needs extfs drivers)
+# 1) mount SD card
+# 2) on OSX, `cd Volumes/[ 2nd partition mount ]`
+# 3) `cd etc/rc2.d`
+# 4) make SSH autostart by setting rc with `mv K01ssh S01ssh`
+# 5) unmount, cross fingers and boot up
+# - http://raspberrypi.stackexchange.com/questions/4444/enabling-ssh-on-rpi-without-screen-keystrokes-for-raspi-config 
+# - raspi-config script is in /etc/profile.d
+
+# Backup SD Card Image:
+# 1) mount SD card
+# 2) dd if=/dev/disk3 of=20130528-raspbian-wheezy-nei.img
+
+raspian-read-image() {   
+  # $1 == if (in file)
+  # $2 == of (out file)
+  # (bs byte-size needs to be 1m)  
+
+  sudo dd if=$1 of=$2 bs=1m; }
+
+raspian-write-image() { 
+  echo Input from File: (~/Downloads/20130201-raspbian-wheezy.img)
+  local wheezyIn; read wheezyIn;
+  
+  echo Output to SD Card: (/dev/disk3s or /dev/rdisk3):
+  local wheezyOut; read wheezyOut;
+
+  echo sudo dd bs=1s if=$wheezyIn of=$wheezyOut
+  echo Are You Sure? =====> Ctrl-C to Exit
+  local wheezyConfirm; read wheezyConfirm;
+
+  sudo dd bs=1 if=$wheezyIn of=$wheezyOut; }
+
