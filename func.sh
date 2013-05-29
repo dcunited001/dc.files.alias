@@ -419,23 +419,28 @@ gpg-verify-gz() { gzip -cd $1 | gpg --verify $2 }
 # 1) mount SD card
 # 2) dd if=/dev/disk3 of=20130528-raspbian-wheezy-nei.img
 
-raspian-read-image() {   
-  # $1 == if (in file)
-  # $2 == of (out file)
-  # (bs byte-size needs to be 1m)  
+raspbian-img() {   
+  # When Reading:
+  #   $1 == if (in dev-file)
+  #   $2 == of (out file)
 
+  # When Writing:
+  #   $1 == if (out dev-file)
+  #   $2 == of (in file)
+
+  # (bs byte-size needs to be 1m)  
   sudo dd if=$1 of=$2 bs=1m; }
 
-raspian-write-image() { 
-  echo Input from File: (~/Downloads/20130201-raspbian-wheezy.img)
+raspbian-img-interactive() { 
+  echo "Input from File: (~/Downloads/20130201-raspbian-wheezy.img):"
   local wheezyIn; read wheezyIn;
   
-  echo Output to SD Card: (/dev/disk3s or /dev/rdisk3):
+  echo "Output to SD Card: (/dev/disk3s or /dev/rdisk3):"
   local wheezyOut; read wheezyOut;
 
-  echo sudo dd bs=1s if=$wheezyIn of=$wheezyOut
-  echo Are You Sure? =====> Ctrl-C to Exit
+  echo "sudo dd bs=1s if=$wheezyIn of=$wheezyOut"
+  echo "Are You Sure? =====> Ctrl-C to Exit"
   local wheezyConfirm; read wheezyConfirm;
 
-  sudo dd bs=1 if=$wheezyIn of=$wheezyOut; }
+  sudo dd bs=1m if=$wheezyIn of=$wheezyOut; }
 
