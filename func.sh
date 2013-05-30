@@ -422,8 +422,8 @@ gpg-verify-gz() { gzip -cd $1 | gpg --verify $2 }
 
 raspbian-img() {   
   # When Reading:
-  #   $1 == if  (out file)
-  #   $2 == of (in dev-file)
+  #   $1 == if  (in dev-file)
+  #   $2 == of (out file)
 
   # When Writing:
   #   $1 == if (in file)
