@@ -422,12 +422,12 @@ gpg-verify-gz() { gzip -cd $1 | gpg --verify $2 }
 
 raspbian-img() {   
   # When Reading:
-  #   $1 == if (in dev-file)
-  #   $2 == of (out file)
+  #   $1 == if  (out file)
+  #   $2 == of (in dev-file)
 
   # When Writing:
-  #   $1 == if (out dev-file)
-  #   $2 == of (in file)
+  #   $1 == if (in file)
+  #   $2 == of if (out dev-file)
 
   # (bs byte-size needs to be 1m)  
   sudo dd if=$1 of=$2 bs=1m; }
