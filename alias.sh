@@ -348,6 +348,12 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
+alias ping8='ping 8.8.8.8'
+alias c-lj='cd /Users/dc/dev/clj'
+alias c-ha='cd /Users/dc/dev/hack4co/hackForCO'
+alias tree='tree -C'
+alias glnr='git pull --no-rebase origin'
+alias c-co='cd /Users/dc/dev/hack4co/hackCO'
 alias reads='read -s'
 alias emfi='cd /Users/dc/.files && emacs README'
 alias gre='grep -e'
