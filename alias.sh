@@ -61,7 +61,7 @@ alias szsh='source ~/.zsh/.zshrc'
 #===============================
 # CD
 #===============================
-alias c-v='cd ~/ops/vagrant'
+alias c-v='cd /Volumes/dev/ops/vagrant'
 alias c-o='cd ~/ops'
 alias c-h='cd ~/dev/homebrew'
 alias c-br='cd ~/dev/homebrew'
@@ -348,6 +348,8 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
+alias glrom='git pull --rebase origin master'
+alias pc='pbcopy < '
 alias ping8='ping 8.8.8.8'
 alias c-lj='cd /Users/dc/dev/clj'
 alias c-ha='cd /Users/dc/dev/hack4co/hackForCO'
