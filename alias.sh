@@ -348,6 +348,7 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
+alias shc='ssh-config'
 alias glrom='git pull --rebase origin master'
 alias pc='pbcopy < '
 alias ping8='ping 8.8.8.8'
