@@ -348,6 +348,8 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
+alias bxr='bundle exec rake'
+alias bx='bundle exec'
 alias gcs='git checkout stable'
 alias grea='git rebase --abort'
 alias gcl='git clone'
