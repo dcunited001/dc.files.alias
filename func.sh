@@ -371,6 +371,12 @@ get-temp-file(){
 }
 
 #==========================
+# HEXTASTIC Y'ALL
+#==========================
+to-dec() { echo $((16#$1)); }
+#to-hex() { echo $((8#$1)); } <== conversion only works for base2
+
+#==========================
 # SHAWESHUM BRO
 #==========================
 # shasum [file]
