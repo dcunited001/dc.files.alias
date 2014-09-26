@@ -348,6 +348,9 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
+alias tmnt='tmux new -ds'
+alias tmn='tmux new'
+alias tm='tmux'
 alias bxr='bundle exec rake'
 alias bx='bundle exec'
 alias gcs='git checkout stable'
