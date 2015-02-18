@@ -8,8 +8,6 @@ export DFE=$DF/emacs
 export DFV=$DF/vim
 export DFK=$DF/kbd
 
-#glock() { kill -$("$1") $2 }
-
 #===============================
 # YO DAWG! I HEARD YOU LIKE ALIASES!
 #===============================
@@ -348,6 +346,7 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # TODO: just change it to use sed. FML lol
 
 #__APALI__#
+alias emax='/Applications/Emacs.app/Contents/MacOS/Emacs'
 alias ta='tmux attach'
 alias tat='tmux attach -t'
 alias tmnt='tmux new -ds'
