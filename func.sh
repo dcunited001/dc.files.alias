@@ -161,7 +161,7 @@ gbrsync() {
   git checkout $gbshead
   git fetch $gbsremote
   git pull $gbsremote $gbshead
-[1;5A] 
+
   # TODO: split up into multiple functions 4 xargs
   gitbruser $gbsfolder --no-merged |
     xargs -I -=-= sh -c "git checkout -=-=; git rebase $gbshead; if [ \"\$?\" -ne 0 ]; then git rebase --abort; fi;"
