@@ -112,7 +112,7 @@ gitar() { echo $* | xargs -n1 echo }
 #   if your script uses gwip/grewip (like grbsync)
 #===============
  
-gwip() {
+gitwip() {
   gwipname=${1:-wip}-`date +%s`
   git add -A;
   git ls-files --deleted -z |
@@ -120,7 +120,7 @@ gwip() {
   git commit -m $gwipname;
   echo $gwipname; }
  
-grewip() {
+gitrewip() {
   git log -n 1 |
     grep -q -c $1 &&
       git reset HEAD~1; }
@@ -154,14 +154,14 @@ gbrsync() {
  
   # WIP_saved against the current branch
   gbscur=$(gcurbr)
-  gbswip=$(gwip)
+  gbswip=$(gitwip)
  
   # TODO: backup branches?
  
   git checkout $gbshead
   git fetch $gbsremote
   git pull $gbsremote $gbshead
-[1;5A] 
+
   # TODO: split up into multiple functions 4 xargs
   gitbruser $gbsfolder --no-merged |
     xargs -I -=-= sh -c "git checkout -=-=; git rebase $gbshead; if [ \"\$?\" -ne 0 ]; then git rebase --abort; fi;"
