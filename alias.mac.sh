@@ -3,6 +3,9 @@ source $HOME/.files/alias/alias.sh
 #typical mac ish
 export USRPREF=$HOME/Library/Preferences
 
+#emacs
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+
 #opening urls
 alias urlch="open -a '/Applications/Google Chrome.app'"
 alias urlfi="open -a '/Applications/Firefox.app'"
