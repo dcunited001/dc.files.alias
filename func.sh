@@ -347,6 +347,8 @@ awk-insert-below-and-replace(){
   awk-insert-below $@[@] > $filefoo;
   cp $file $file.bak; mv $filefoo $file; }
 
+#TODO: awk-extract-filename-from-url() see download-list-with-prefix()
+
 #===============================
 # Sed Functions
 #===============================
@@ -368,6 +370,24 @@ get-temp-file(){
   tmpfoo=`basename $1`
   tmpfile=`mktemp /tmp/${tmpfoo}.XXXXXX` || exit 1
   echo $tmpfile
+}
+
+#==========================
+# Wget Functions
+#==========================
+
+download-list-with-prefix() {
+    file=$1
+    prefix=$2
+    numparallel=${3:-1}
+    awkscript='{printf($0); prefix="'
+    awkscript+="$prefix"
+    awkscript+='"; filename=$0; sub(/^http:.*\//,"",filename);'
+    awkscript+='printf(" %s%s\n",prefix,filename)}'
+
+    #download one at a time
+    echo $numparallel
+    awk $awkscript < $1 | cut -d' ' -f1,2 | xargs -n2 -P $numparallel bash -c 'wget $0 -O $1'
 }
 
 #==========================
