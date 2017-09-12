@@ -1,7 +1,6 @@
 #!/bin/bash
 # shell functions for all platforms
 
-
 #===============================
 # Hub Auth
 #===============================
@@ -287,36 +286,16 @@ bunshift() {
 #==========================
 
 #==========================
-# Split Strings
+# Text Processing
 #==========================
 
-#===============================
-# Alias Functions
-#===============================
-insert-alias(){
-  #file=$1; anchor=$2; name=$3; cmd=$4;
-  echo "==[ INSERTING ALIAS ]=="
-  echo "Searching for '$2' in $1"
-  alicmd="alias $3=$4"
-  awk-insert-below-and-replace $1 $2 $alicmd 1> /dev/null; }
-
-EMACS_APALI_ANCHOR=";;;___"
-EMACS_BINDKEYS_FILE="$DFE/support/bindkeys.el.bak"
-
-emacs-bindkey-insert(){
-  file=$1; anchor="$EMACS_APALI_ANCHOR$2"; key=$3; defun=$4;
-  cmd="(global-set-key (kbd \"$key\") '$defun)"
-  echo $cmd
-  awk-insert-below-and-replace $file $anchor $cmd 1> /dev/null
+word-freq() {
+  grep -o -E '\w+' $1 | sort | uniq -c | sort -n;
 }
 
-emacs-bindkey-anchors(){ list-anchors $EMACS_BINDKEYS_FILE EMACS_APALI_ANCHOR; }
-
-# can use sed but need to escape chars
-list-anchors(){ file=$1; anchor=$2;
-    cat $file | grep -e $anchor | awk "{ gsub(/^$anchor/, \"\"); print }"; }
-
-#cat $DFE/support/bindkeys.el | grep -e ';;;___' | sed s/\;\;\;___//
+#==========================
+# Split Strings
+#==========================
 
 #===============================
 # Awk Functions
