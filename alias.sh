@@ -1,13 +1,3 @@
-#TODO: add alias/function for adding todos! to .files mostly (eg adding todo to map emacs key)
-
-#vars (needs to move)
-export DF=$DOTFILES
-export DFA=$DF/alias
-export DFZ=$DF/zsh
-export DFE=$DF/emacs
-export DFV=$DF/vim
-export DFK=$DF/kbd
-
 #===============================
 # YO DAWG! I HEARD YOU LIKE ALIASES!
 #===============================
@@ -15,9 +5,13 @@ export DFK=$DF/kbd
 #   * ESPECIALLY THE FIRST ONE: AGR=ALIAS | GREP
 #   * changed to use functions
 agr() { alias | grep -e "$*"; }
+agri() { alias | grep -i -e "$*"; }
 hgr() { history | grep -e "$*"; }
+hgri() { history | grep -i -e "$*"; }
 pgr() { ps aux | grep -e "$*"; }
+pgri() { ps aux | grep -e -i "$*"; }
 lgr() { ls -al | grep -e "$*"; }
+lgri() { ls -al | grep -e -i "$*"; }
 
 #===============================
 # EMACS
@@ -314,24 +308,20 @@ alias herkad='heroku keys:add '
 
 
 #==========================
-# APPEND NEW ALIASES QUICKLY
+# APPEND NEW ALIASES QUICKLY (./apali.sh)
 #==========================
 # APALI - a function to extract rainbows from unicorns
 #           using trade-secret cold-water extraction method
 
 # quickly add new aliases after a pattern
 #   then sort out aliases later
-APALI_REGEX=$(printf '%q' '#__APALI__#')
+#APALI_REGEX=$(printf '%q' '#__APALI__#')
 #APALI_REGEX="__APALI__"
 
 # NOTE: FOR NOW THE QUOTING FOR THESE IS A LITTLE BROKE
 #   YOU MUST SURROUND THE SECOND ARG with "'cmd'"
 # EG:  apali foo "'bar --opts opt1 arg1 arg2 '"
 #  TRIPLE QUOTES -- IT'S A HAT TRICK LOLOLOL SMH
-
-alias apali="insert-alias $DFA/alias.sh $APALI_REGEX "
-alias apalim="insert-alias $DFA/alias.mac.sh $APALI_REGEX "
-alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 
 # also you will have wierd bugs if you are trying to insert
 #   something that your shell session already recognizes
@@ -341,9 +331,6 @@ alias apaliu="insert-alias $DFA/alias.ubu.sh $APALI_REGEX "
 # new aliases will magically appear here
 #   to be sorted out later
 
-# TODO: fix apali for multiple args =/ have to use quotes
-# TODO: apali needs to pass quotes.
-# TODO: just change it to use sed. FML lol
 
 #__APALI__#
 alias emax='/Applications/Emacs.app/Contents/MacOS/Emacs'
@@ -362,11 +349,8 @@ alias shc='ssh-config'
 alias glrom='git pull --rebase origin master'
 alias pc='pbcopy < '
 alias ping8='ping 8.8.8.8'
-alias c-lj='cd /Users/dc/dev/clj'
-alias c-ha='cd /Users/dc/dev/hack4co/hackForCO'
 alias tree='tree -C'
 alias glnr='git pull --no-rebase origin'
-alias c-co='cd /Users/dc/dev/hack4co/hackCO'
 alias reads='read -s'
 alias emfi='cd /Users/dc/.files && emacs README'
 alias gre='grep -e'
